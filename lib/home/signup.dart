@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:task2/home/signup.dart';
+import 'package:task2/home/login.dart';
 import 'package:task2/home/homepage.dart';
 
-class MyLogin extends StatelessWidget {
-  const MyLogin({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MyLogin extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome',
+                    'Create New Account',
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
@@ -30,27 +30,9 @@ class MyLogin extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 5,),
-              Text(
-                'Sign In',
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
               SizedBox(height:25),
               Text(
-                'Login to your account',
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey,
-                ),
-              ),
-              SizedBox(height:25),
-              Text(
-                'Email',
+                'Full Name',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -61,7 +43,7 @@ class MyLogin extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey),
                   ),
-                  hintText: 'Enter email',
+                  hintText: 'Enter your full name',
                   hintStyle: TextStyle(color: Colors.grey),
                   ),
               ),
@@ -83,18 +65,41 @@ class MyLogin extends StatelessWidget {
                   ),
               ),
               SizedBox(height: 10,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Forgot password',
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-
-                    ),
-                    ),
-                ],
+              Text(
+                'Email',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+              SizedBox(height: 10,),
+              TextField(
+                  decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintText: 'Enter email',
+                  hintStyle: TextStyle(color: Colors.grey),
+                  ),
               ),
+              SizedBox(height: 10,),
+              Text(
+                'Mobile Number',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+              SizedBox(height: 10,),
+              TextField(
+                  decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintText: 'Enter phone number',
+                  hintStyle: TextStyle(color: Colors.grey),
+                  ),
+              ),
+              // SizedBox(height: 10,),
+              
               SizedBox(height: 30,),
               Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 2),
@@ -112,7 +117,8 @@ class MyLogin extends StatelessWidget {
                         backgroundColor: Color.fromARGB(255, 57, 135, 180),
                         foregroundColor: Colors.white,
                       ),
-                      child: const Text('Sign In',
+                      child: const Text(
+                        'Sign Up',
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 20,
@@ -151,9 +157,9 @@ class MyLogin extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Dont have an account?'),
+                  Text('Already have an account?'),
                   TextButton(
-                    child: Text('Sign Up',
+                    child: Text('Sign In',
                     style:TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
@@ -162,7 +168,7 @@ class MyLogin extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignUp()),
+                        MaterialPageRoute(builder: (context) => MyLogin()),
                       );
                     },
                   )
