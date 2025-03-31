@@ -1,11 +1,21 @@
+// buildscript {
+//     repositories {
+//         google()
+//         jcenter()
+//     }
+//     dependencies{
+//         classpath 'com.google.gms.google-services:4.4.2'
+//   }
+// }
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral() 
     }
-    dependencies{
-        classpath 'com.google.gms.google-services:4.4.2'
-  }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.2' 
+        classpath 'com.google.gms:google-services:4.4.2' 
+    }
 }
 
 allprojects {
